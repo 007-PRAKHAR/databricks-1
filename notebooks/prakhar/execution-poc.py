@@ -1,1 +1,1 @@
-pip insall pypi
+pip install pypi
