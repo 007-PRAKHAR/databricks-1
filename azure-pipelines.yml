@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: 'Ubuntu-latest'
+  name: 'ubuntu-latest'
 
 steps:
 - task: UsePythonVersion@0
