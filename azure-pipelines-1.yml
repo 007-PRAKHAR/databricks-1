@@ -39,6 +39,7 @@ steps:
 - script: |
     git diff --name-only --diff-filter=AMR HEAD^1 HEAD | xargs -I '{}' cp --parents -r '{}' $(Build.BinariesDirectory)
 
+    mkdir -p $(Build.BinariesDirectory)/libraries/libs
     mkdir -p $(Build.BinariesDirectory)/libraries/dbxdemo
     cp $(Build.Repository.LocalPath)/libraries/dist/*.* $(Build.BinariesDirectory)/libraries/libs
 
