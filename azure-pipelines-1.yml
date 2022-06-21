@@ -21,14 +21,6 @@ steps:
     pip install -U databricks-connect==6.4.*
   displayName: 'Load Python Dependencies'
 
-
-- checkout: self
-  persistCredentials: true
-  clean: true
-
-- script: git checkout release
-  displayName: 'Get Latest Branch'
-
 - script: |
     cd $(Build.Repository.LocalPath)/libraries/
     python3 setup.py sdist bdist_wheel
